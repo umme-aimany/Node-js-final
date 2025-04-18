@@ -20,14 +20,20 @@ fs.readdir(fullpath, (err, files) => {
 
 ////variable task 
 
-let name1 = "Ali"; 
-let name2 = null;    
+let firstName = "Ali";
+let lastName = null;
 
+const setLastName = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Khan");
+    }, 2000);
+});
 
-setTimeout(() => {
-    name2 = "Aiman";
-    let fullName = name1 + " & " + name2;
-    console.log("Full Name:", fullName);
-}, 2000);
+const displayFullName=async()=> {
+    lastName = await setLastName;
+    console.log(`${firstName} ${lastName}`);
+}
+
+displayFullName();
 
 
