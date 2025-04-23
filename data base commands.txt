@@ -1,0 +1,27 @@
+mongosh 
+show dbs
+use navtacc
+db.createCollections("students")
+show dbs
+show collection
+db.students.renameCollection("students")
+
+
+
+db.studentsdata.insertOne({std_name:"Aiaman",age:20,Qualification:"bscs"})
+db.studentsdata.insetOne({std_name:"Abdullah",age:18,Qualification:"CSS",Skills:["html","CSS","JAVA SCRIPT"]})
+db.studentsdata.find()
+//////////////////////many///////////////////
+db.studentsdata.insertMany([{std_name:"Ali",age:20,Qualification:"intermediate"},([{std_name:"shahzaib",Age:23,Qualification:"Masters"}])
+
+///////////////////////////////////////////////////////////////////////////////
+db.studentsdata.insertMany([
+  { std_name: "Ali", age: 20, Qualification: "intermediate" },
+  { std_name: "shahzaib", age: 23, Qualification: "Masters" }
+])
+//////////////////////////////////agar filter kar ka pahla document chaiye to /////
+db.studentsdata.findOne()
+/////////////////////agar filter kar ka specific document chaiye to //////////////////
+db.studentsdata.findOne({ std_name: "Ali" })
+
+
