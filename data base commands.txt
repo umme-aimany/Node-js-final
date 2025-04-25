@@ -56,5 +56,6 @@ db.createCollection("staff", {
 //////////////////ya sirf collections dekhan ka liya ha /////////////
 db.getCollectionInfos()
 
+db.students.updateOne({_id;objectId('............................')},{$set:{age:20}})
 
 
